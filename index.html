@@ -17,11 +17,12 @@
 
 <body ng-app="SuggestionBox" ng-controller="HomeController">
 
-  <div ng-repeat="post in posts">
+  <div ng-repeat="post in posts | orderBy : 'upvotes' : true ">
 
     <div> {{ post.title }} </div>
     <div> {{ post.upvotes }} </div>
     <div> {{ post.comments }} </div>
+
 
   </div>
 

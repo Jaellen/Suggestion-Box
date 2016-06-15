@@ -5,13 +5,13 @@ app.factory('suggestions', [function() {
     posts:
     [
       {
-          title:"Save the environment by having everyone to bring their own mugs and water bottles to work",
-          upvotes:15,
-          comments:[]
+          title:"Implemement an easier system for meeting and board room bookings",
+          upvotes:4,
+          comments:["Comment 1", "Comment 2"]
       },
       {
-          title:"Hold a demo night social for everyone to show off their awesome work",
-          upvotes:11,
+          title:"Save the environment by having everyone to bring their own mugs and water bottles to work",
+          upvotes:15,
           comments:[]
       },
       {
@@ -26,13 +26,13 @@ app.factory('suggestions', [function() {
           comments:[]
       },
       {
-          title:"Create an online swag shop for employees and customers to buy awesome company swag",
-          upvotes:8,
+          title:"Hold a demo night social for everyone to show off their awesome work",
+          upvotes:11,
           comments:[]
       },
       {
-          title:"Implemement an easier system for meeting and board room bookings",
-          upvotes:4,
+          title:"Paint the back wall with inspirational quotes and company values",
+          upvotes:1,
           comments:[]
       },
       {
@@ -41,8 +41,8 @@ app.factory('suggestions', [function() {
           comments:[]
       },
       {
-          title:"Paint the back wall with inspirational quotes and company values",
-          upvotes:1,
+          title:"Create an online swag shop for employees and customers to buy awesome company swag",
+          upvotes:8,
           comments:[]
       }
     ]
