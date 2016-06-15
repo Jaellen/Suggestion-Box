@@ -19,5 +19,9 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
       $scope.title = '';
     };
 
+    $scope.upVote = function(post) {
+      post.upvotes += 1;
+    };
+
 
 }]);

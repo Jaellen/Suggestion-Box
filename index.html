@@ -30,8 +30,12 @@
   <!-- Suggestion, Comments, Upvotes section starts -->
   <div ng-repeat="post in posts | orderBy : 'upvotes' : true ">
     <div> {{ post.title }} </div>
-    <div> {{ post.upvotes }} </div>
+    <p>
+      <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)"></span>
+      Upvotes: {{post.upvotes}}
+    </p>
     <div> {{ post.comments }} </div>
+
   </div>
 
   <!-- Modules -->

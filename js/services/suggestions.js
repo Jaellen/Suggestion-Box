@@ -7,7 +7,7 @@ app.factory('suggestions', [function() {
       {
           title:"Implemement an easier system for meeting and board room bookings",
           upvotes:4,
-          comments:["Comment 1", "Comment 2"]
+          comments:[]
       },
       {
           title:"Save the environment by having everyone to bring their own mugs and water bottles to work",
