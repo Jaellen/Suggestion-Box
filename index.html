@@ -15,15 +15,23 @@
 
 <h1> Company X Suggestion Box </h1>
 
+
 <body ng-app="SuggestionBox" ng-controller="HomeController">
 
-  <div ng-repeat="post in posts | orderBy : 'upvotes' : true ">
+  <!-- Suggestion form -->
+  <form ng-submit="addSuggestion()" style="margin-top: 50px">
+    <h3> Submit Your Suggestion </h3>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Great ideas here" ng-model="title"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Suggest</button>
+  </form>
 
+  <!-- Suggestion, Comments, Upvotes section starts -->
+  <div ng-repeat="post in posts | orderBy : 'upvotes' : true ">
     <div> {{ post.title }} </div>
     <div> {{ post.upvotes }} </div>
     <div> {{ post.comments }} </div>
-
-
   </div>
 
   <!-- Modules -->
