@@ -13,6 +13,7 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
       $scope.posts.push({
         title: $scope.title,
         upvotes: 0,
+        comments: []
       });
 
       //after submit, clear input
