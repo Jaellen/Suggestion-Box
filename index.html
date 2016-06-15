@@ -3,19 +3,30 @@
 <head>
   <title>SuggestionBox</title>
 
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet" />
   <script type="text/javascript" src="js/vendor/angular.min.js"></script>
   <script type="text/javascript" src="js/vendor/angular-route.js"></script>
 
+  <!-- Solves a "character encoding of the HTML document was not declared" error -->
+  <meta charset="UTF-8">
+
 </head>
 
-<body ng-app="SuggestionBox">
-  <div ng-controller="HomeController">
-    <h1> {{ helloWorld }} </h1>
+<h1> Company X Suggestion Box </h1>
+
+<body ng-app="SuggestionBox" ng-controller="HomeController">
+
+  <div ng-repeat="post in posts">
+
+    <div> {{ post.title }} </div>
+    <div> {{ post.upvotes }} </div>
+    <div> {{ post.comments }} </div>
+
   </div>
 
-
+  <p></p>
+  <div> {{ hello }} </div>
 
   <!-- Modules -->
   <script type="text/javascript" src="js/app.js"></script>
@@ -25,12 +36,10 @@
   <script type="text/javascript" src="js/controllers/CommentsController.js"></script>
 
   <!-- Services -->
-  <script type="text/javascript" src="/Users/Jon/web/suggestion_box/js/services/data.js"></script>
+  <script type="text/javascript" src="js/services/suggestions.js"></script>
 
   <!-- Directives -->
-  <script type="text/javascript" src="js/directives/Suggestions.js"></script>
-  <script type="text/javascript" src="js/directives/Comments.js"></script>
-  <script type="text/javascript" src="js/directives/Vote.js"></script>
+
 
 </body>
 
