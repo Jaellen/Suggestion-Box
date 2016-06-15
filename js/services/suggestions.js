@@ -5,7 +5,7 @@ app.factory('suggestions', [function() {
     posts:
     [
       {
-          title:"Implemement an easier system for meeting and board room bookings",
+          title:"Implement an easier system for meeting and board room bookings",
           upvotes:4,
           comments:[]
       },

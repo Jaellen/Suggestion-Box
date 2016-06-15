@@ -24,5 +24,4 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
       post.upvotes += 1;
     };
 
-
 }]);

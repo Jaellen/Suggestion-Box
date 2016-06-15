@@ -1,0 +1,16 @@
+<h2> Comments Page </h2>
+
+<!-- Show the current suggestion clicked on here -->
+<h3> {{ post.title }} </h3>
+
+<!-- See a list of the comments for current suggestion -->
+<div ng-repeat="comment in comment | orderBy : 'upvotes' : true ">
+  <div> {{ post.comments }} </div>
+  <p>
+    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)"></span>
+    Upvotes: {{comment.upvotes}}
+  </p>
+</div>
+
+
+<!-- Add comments form to add comments -->
