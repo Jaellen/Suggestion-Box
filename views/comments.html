@@ -1,4 +1,5 @@
-<h2> Comments Page </h2>
+<!-- List the suggestion here -->
+<h3> {{ post.title }} </h3>
 
 <!-- Suggestion form -->
 <form ng-submit="addComment()" style="margin-top: 50px">
@@ -10,13 +11,12 @@
 </form>
 
 <!-- See a list of the comments for current suggestion -->
-<div ng-repeat="comment in comment | orderBy : 'upvotes' : true ">
-  <div> {{ post.comments }} </div>
+<div ng-repeat="comment in posts.comments | orderBy : 'upvotes' : true ">
+  <div> {{ posts.comment.body }} </div>
   <p>
-    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)"></span>
-    Upvotes: {{comment.upvotes}}
+    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(comment)"></span>
+    Upvotes: {{ posts.comment.upvotes }}
   </p>
 </div>
 
-
-<!-- Add comments form to add comments -->
+<!-- Test dummy comments -->

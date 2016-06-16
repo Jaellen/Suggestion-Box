@@ -1,18 +1,21 @@
 <!-- Suggestion form -->
+
+<!-- ng-submit="addSuggestion()" calls this function whenever a user submits an input -->
 <form ng-submit="addSuggestion()" style="margin-top: 50px">
   <h3> Submit Your Suggestion </h3>
   <div class="form-group">
+    <!-- ng-model="title" means whatever the user inputs is labelled "title" -->
     <input type="text" class="form-control" placeholder="Great ideas here" ng-model="title"></input>
   </div>
   <button type="submit" class="btn btn-primary">Suggest</button>
 </form>
 
 <!-- Suggestion, Comments, Upvotes section starts -->
-<div ng-repeat="post in posts | orderBy : 'upvotes' : true ">
-  <div> {{ post.title }} </div>
+<div ng-repeat="c in a | orderBy : 'upvotes' : true ">
+  <div> {{ c.title }} </div>
   <p>
-    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)"></span>
-    Upvotes: {{post.upvotes}}
+    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(c)"></span>
+    Upvotes: {{c.upvotes}}
   </p>
   <a href="#/comments/{{$index}}">Comments</a>
 </div>

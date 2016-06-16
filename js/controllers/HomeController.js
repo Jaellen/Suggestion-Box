@@ -1,7 +1,10 @@
 app.controller('HomeController', ['$scope', 'suggestions', function($scope, suggestions) {
 
-  $scope.posts = suggestions.posts;
+  /* This is craeting an AngularJs object called 'a' which we are connecting the service
+  'suggestions' to and passing the data_array*/
+  $scope.a = suggestions.data_array;
 
+  /* This function is used to add new suggestion to the data_array*/
   $scope.addSuggestion = function()
     {
       //if input empty, don't submit
@@ -9,9 +12,9 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
         return;
       };
 
-      //push suggestion posts in suggestions.js
-      $scope.posts.push({
-        title: $scope.title,
+      //push new suggestion post in suggestions.js
+      $scope.a.push({
+        title: $scope.title,  // here we are pushing the user input angular object a
         upvotes: 0,
         comments: []
       });
@@ -20,8 +23,8 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
       $scope.title = '';
     };
 
-    $scope.upVote = function(post) {
-      post.upvotes += 1;
+    $scope.upVote = function(c) {
+      c.upvotes += 1;
     };
 
 }]);

@@ -11,7 +11,8 @@ app.controller('CommentsController', ['$scope', 'suggestions', '$routeParams', f
     };
 
     //push comment in suggestions.js
-      $scope.post.comments.push({
+    $scope.post.comments.push
+    ({
       body: $scope.comments.body,
       upvotes: 0,
     });

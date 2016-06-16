@@ -1,0 +1,22 @@
+** -------------- SUMMARY OF PROJECT "suggestion_box" -------------- **
+                          VARIABLES & NOTES
+
+Project name: suggestion_box
+User: Jonathan Aellen
+
+
+----- CONTROLLER ------
+
+a = an angular object created to make the data_array visible to view
+
+
+------ SERVICES -------
+
+suggestions = service for the app's data
+x = object containing the data_array
+data_array = array that contains the suggestions, upvotes and comments
+
+
+------- VIEWS ---------
+
+c = key value created in ng-repeat
