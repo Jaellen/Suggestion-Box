@@ -1,4 +1,4 @@
-app.controller('CommentsController', ['$scope', 'suggestions','$routeParams', function($scope, suggestions, $routeParams) {
+app.controller('CommentsController', ['$scope', 'suggestions', '$routeParams', function($scope, suggestions, $routeParams) {
 
   $scope.post =  suggestions.posts[$routeParams.id];
 
@@ -6,18 +6,18 @@ app.controller('CommentsController', ['$scope', 'suggestions','$routeParams', fu
   $scope.addComment = function()
   {
     //if input empty, don't submit
-    if(!$scope.comments || $scope.comments === "") {
+    if(!$scope.comments.body || $scope.comments.body === "") {
       return;
     };
 
     //push comment in suggestions.js
-    $scope.post.push({
-      body: $scope.comments,
+      $scope.post.comments.push({
+      body: $scope.comments.body,
       upvotes: 0,
     });
 
     //after submit, clear input
-    $scope.comments = '';
+    $scope.comments.body = '';
   };
 
   $scope.upVote = function(comment) {

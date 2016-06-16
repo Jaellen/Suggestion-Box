@@ -1,7 +1,13 @@
 <h2> Comments Page </h2>
 
-<!-- Show the current suggestion clicked on here -->
-<h3> {{ post.title }} </h3>
+<!-- Suggestion form -->
+<form ng-submit="addComment()" style="margin-top: 50px">
+  <h3> Submit Your Comment </h3>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Comments Here" ng-model="comments.body"></input>
+  </div>
+  <button type="submit" class="btn btn-primary">Comment</button>
+</form>
 
 <!-- See a list of the comments for current suggestion -->
 <div ng-repeat="comment in comment | orderBy : 'upvotes' : true ">
