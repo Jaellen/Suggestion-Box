@@ -11,11 +11,16 @@
 </form>
 
 <!-- Suggestion, Comments, Upvotes section starts -->
-<div ng-repeat="c in a | orderBy : 'upvotes' : true ">
-  <div> {{ c.title }} </div>
+<!-- orderBy filter sorts the suggestions by 'upvotes', by default from lowest to
+highest but with the reverse set to true it is set highest to lowest -->
+<div ng-repeat="b in a | orderBy : 'upvotes' : true ">
+  <div> {{ b.title }} </div>
   <p>
-    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(c)"></span>
-    Upvotes: {{c.upvotes}}
+    <!-- ng-click calls the upVote() function which increases upvote by 1-->
+    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(b)"></span>
+    Upvotes: {{b.upvotes}}
   </p>
+  <!-- $index will give you back the number of times the loop has looped, like a counter.
+  Here we are using it as the ID number of the suggestion -->
   <a href="#/comments/{{$index}}">Comments</a>
 </div>

@@ -1,22 +1,20 @@
 <!-- List the suggestion here -->
-<h3> {{ post.title }} </h3>
+<h3> {{ b.title }} </h3>
 
 <!-- Suggestion form -->
 <form ng-submit="addComment()" style="margin-top: 50px">
   <h3> Submit Your Comment </h3>
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Comments Here" ng-model="comments.body"></input>
+    <input type="text" class="form-control" placeholder="Comments Here" ng-model="titleB"></input>
   </div>
   <button type="submit" class="btn btn-primary">Comment</button>
 </form>
 
 <!-- See a list of the comments for current suggestion -->
-<div ng-repeat="comment in posts.comments | orderBy : 'upvotes' : true ">
-  <div> {{ posts.comment.body }} </div>
+<div ng-repeat="y in x.comments | orderBy : 'upvotes' : true ">
+  <div> {{ y.body }} </div>
   <p>
-    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(comment)"></span>
-    Upvotes: {{ posts.comment.upvotes }}
+    <span class="glyphicon glyphicon-plus-sign" ng-click="upVoteB(y)"></span>
+    Upvotes: {{ y.upvotes }}
   </p>
 </div>
-
-<!-- Test dummy comments -->

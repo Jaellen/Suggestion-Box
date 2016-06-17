@@ -1,28 +1,29 @@
 app.controller('CommentsController', ['$scope', 'suggestions', '$routeParams', function($scope, suggestions, $routeParams) {
 
-  $scope.post =  suggestions.posts[$routeParams.id];
+  /* This is craeting an AngularJs object called 'x' which we are connecting the service
+  'suggestions' to and passing the data_array comment with the current ID*/
+  $scope.x =  suggestions.data_array[$routeParams.id];
 
-  // push comment post in suggestion.js
+  /* This function is used to add a new comment to the data_array with the current ID*/
   $scope.addComment = function()
   {
     //if input empty, don't submit
-    if(!$scope.comments.body || $scope.comments.body === "") {
+    if(!$scope.titleB || $scope.titleB === "") {
       return;
     };
 
-    //push comment in suggestions.js
-    $scope.post.comments.push
-    ({
-      body: $scope.comments.body,
-      upvotes: 0,
+    //push comment into the comments attribute of the data_array
+    $scope.x.comments.push({
+      body: $scope.titleB,
+      upvotes: 0
     });
 
     //after submit, clear input
-    $scope.comments.body = '';
+    $scope.titleB = '';
   };
 
-  $scope.upVote = function(comment) {
-    comment.upvotes += 1;
+  $scope.upVoteB = function(y) {
+    y.upvotes += 1;
   };
 
 }]);

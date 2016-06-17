@@ -3,20 +3,23 @@
 
 Project name: suggestion_box
 User: Jonathan Aellen
-
+Description: A simple user feedback suggestion box web page app for personal
 
 ----- CONTROLLER ------
 
+HomeController:
 a = an angular object created to make the data_array visible to view
 
+CommentsController:
+x = an angular object created to make the data_array visible to view
 
 ------ SERVICES -------
 
 suggestions = service for the app's data
-x = object containing the data_array
+data_object = object containing the data_array
 data_array = array that contains the suggestions, upvotes and comments
 
 
 ------- VIEWS ---------
 
-c = key value created in ng-repeat
+b = key value created in ng-repeat
