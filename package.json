@@ -1,0 +1,24 @@
+{
+  "name": "suggestion_box",
+  "version": "1.0.0",
+  "description": "A suggestion box web app for public use",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "lodash": "^4.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaellen/suggestion_box.git"
+  },
+  "author": "Jaellen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaellen/suggestion_box/issues"
+  },
+  "homepage": "https://github.com/Jaellen/suggestion_box#readme"
+}

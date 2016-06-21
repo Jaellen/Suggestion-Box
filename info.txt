@@ -3,7 +3,7 @@
 
 Project name: suggestion_box
 User: Jonathan Aellen
-Description: A simple user feedback suggestion box web page app for personal
+Description: A simple user feedback suggestion box web page app 
 
 ----- CONTROLLER ------
 
@@ -22,4 +22,5 @@ data_array = array that contains the suggestions, upvotes and comments
 
 ------- VIEWS ---------
 
-b = key value created in ng-repeat
+b = key value created in ng-repeat loop
+y = key value created in ng-repeat loop

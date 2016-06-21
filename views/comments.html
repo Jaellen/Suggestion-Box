@@ -1,7 +1,8 @@
-<!-- List the suggestion here -->
-<h3> {{ b.title }} </h3>
+<!-- Suggestion selected-->
+<div> {{ x.title }} </div>
 
 <!-- Suggestion form -->
+<!-- ng-submit="addSuggestion()" calls this function whenever a user submits an input -->
 <form ng-submit="addComment()" style="margin-top: 50px">
   <h3> Submit Your Comment </h3>
   <div class="form-group">
@@ -10,11 +11,13 @@
   <button type="submit" class="btn btn-primary">Comment</button>
 </form>
 
-<!-- See a list of the comments for current suggestion -->
+<!-- Comments & Upvotes section starts -->
+<!-- orderBy filter sorts the suggestions by 'upvotes', by default from lowest to
+highest but with the reverse set to true it is set highest to lowest -->
 <div ng-repeat="y in x.comments | orderBy : 'upvotes' : true ">
   <div> {{ y.body }} </div>
   <p>
-    <span class="glyphicon glyphicon-plus-sign" ng-click="upVoteB(y)"></span>
+    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(y)"></span>
     Upvotes: {{ y.upvotes }}
   </p>
 </div>

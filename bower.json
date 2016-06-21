@@ -1,0 +1,21 @@
+{
+  "name": "suggestion_box",
+  "description": "A suggestion box web app for public use",
+  "main": "index.js",
+  "authors": [
+    "Jaellen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Jaellen/suggestion_box",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "angular": "^1.5.7"
+  }
+}

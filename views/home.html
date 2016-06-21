@@ -1,5 +1,5 @@
-<!-- Suggestion form -->
 
+<!-- Suggestion form -->
 <!-- ng-submit="addSuggestion()" calls this function whenever a user submits an input -->
 <form ng-submit="addSuggestion()" style="margin-top: 50px">
   <h3> Submit Your Suggestion </h3>
@@ -10,7 +10,7 @@
   <button type="submit" class="btn btn-primary">Suggest</button>
 </form>
 
-<!-- Suggestion, Comments, Upvotes section starts -->
+<!-- Suggestion & Upvotes section starts -->
 <!-- orderBy filter sorts the suggestions by 'upvotes', by default from lowest to
 highest but with the reverse set to true it is set highest to lowest -->
 <div ng-repeat="b in a | orderBy : 'upvotes' : true ">

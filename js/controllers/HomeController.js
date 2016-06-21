@@ -12,6 +12,8 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
         return;
       };
 
+console.log("TEST");
+
       //push new suggestion post into data_array
       $scope.a.push({
         title: $scope.title,  // here we are pushing the user input angular object a
@@ -27,5 +29,7 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
     $scope.upVote = function(b) {
       b.upvotes += 1;
     };
+
+
 
 }]);

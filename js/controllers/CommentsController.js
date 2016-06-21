@@ -12,7 +12,7 @@ app.controller('CommentsController', ['$scope', 'suggestions', '$routeParams', f
       return;
     };
 
-    //push comment into the comments attribute of the data_array
+    //push comment into the 'comments' attribute of the data_array
     $scope.x.comments.push({
       body: $scope.titleB,
       upvotes: 0
@@ -22,8 +22,11 @@ app.controller('CommentsController', ['$scope', 'suggestions', '$routeParams', f
     $scope.titleB = '';
   };
 
-  $scope.upVoteB = function(y) {
+  // a function that increases the upvote by one each time clicked
+  $scope.upVote = function(y) {
     y.upvotes += 1;
   };
+
+
 
 }]);
