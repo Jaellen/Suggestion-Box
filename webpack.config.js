@@ -27,7 +27,6 @@ module.exports = {
                 presets: ['es2015']
             }
         },
-        //
         {
             test: /\.html$/,
             loader: 'raw'
@@ -49,7 +48,6 @@ module.exports = {
             test: /bootstrap-sass\/assets\/javascripts\//,
             loader: 'imports?jQuery=jquery'
         }
-        // 
         ]
     },
     plugins: [

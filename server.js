@@ -1,7 +1,13 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+var routes = require('server/routes');
 
 var PORT = process.env.PORT || 3000;
+
+app.use(bodyParser.json());
+
+routes(app);
 
 app.all('/*', function(req, res) {
     res.send('\
@@ -20,5 +26,5 @@ app.all('/*', function(req, res) {
 });
 
 app.listen(PORT, function() {
-  console.log('Server running on ' + PORT);
+  console.log('Server running on' + PORT);
 });
