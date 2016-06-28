@@ -4,7 +4,8 @@
   "description": "A simple suggestion box for voted organizational ideas, thoughts, and/or feedback",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_PATH=$NODE_PATH:./src node server",
+    "dev": "npm start & webpack-dev-server --progress --colors"
   },
   "repository": {
     "type": "git",
