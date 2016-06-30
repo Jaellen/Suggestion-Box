@@ -1,0 +1,35 @@
+{
+  "name": "suggestion_box",
+  "version": "1.0.0",
+  "description": "A simple suggestion box for gathering upvoted ideas, suggestions, comments, or feedback",
+  "main": "app.js",
+  "scripts": {
+    "babel": "babel --presets es2015 js/app.js -o build/app.bundle.js",
+    "start": "http-server",
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaellen/suggestion_box.git"
+  },
+  "author": "Jonathan Aellen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaellen/suggestion_box/issues"
+  },
+  "homepage": "https://github.com/Jaellen/suggestion_box#readme",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "http-server": "^0.9.0",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.6",
+    "lodash": "^4.13.1"
+  }
+}
