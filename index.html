@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SuggestionBox</title>
+  <head>
+      <title>SuggestionBox</title>
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/main.css" rel="stylesheet" />
+      <script type="text/javascript" src="js/vendor/angular.min.js"></script>
+      <script type="text/javascript" src="js/vendor/angular-route.js"></script>
+      <script type="text/javascript" src="js/vendor/lodash.js"></script>
+      <meta charset="UTF-8">
+  </head>
 
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet" />
-  <script type="text/javascript" src="js/vendor/angular.min.js"></script>
-  <script type="text/javascript" src="js/vendor/angular-route.js"></script>
+  <body ng-app="SuggestionBox" ng-controller="HomeController">
+      <h1> Company X Suggestion Box </h1>
+      <div ng-view></div>
 
-  <!-- Solves a "character encoding of the HTML document was not declared" error -->
-  <meta charset="UTF-8">
-</head>
+      <!-- Modules -->
+      <script type="text/javascript" src="build/app.bundle.js"></script>
+      <!-- Controllers -->
+      <script type="text/javascript" src="js/controllers/HomeController.js"></script>
+      <script type="text/javascript" src="js/controllers/CommentsController.js"></script>
+      <!-- Services -->
+      <script type="text/javascript" src="js/services/suggestions.js"></script>
 
-<!-- App and controller start here -->
-<body ng-app="SuggestionBox" ng-controller="HomeController">
-  <h1> Company X Suggestion Box </h1>
-
-  <!-- This is linked to the router configurated in app.js -->
-  <div ng-view></div>
-
-
-
-  <!-- script src tags -->
-
-  <!-- Modules -->
-  <script type="text/javascript" src="build/app.bundle.js"></script>
-
-  <!-- Controllers -->
-  <script type="text/javascript" src="js/controllers/HomeController.js"></script>
-  <script type="text/javascript" src="js/controllers/CommentsController.js"></script>
-
-  <!-- Services -->
-  <script type="text/javascript" src="js/services/suggestions.js"></script>
-
-  <!-- Directives -->
-
-</body>
-
+  </body>
 </html>

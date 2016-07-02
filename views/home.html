@@ -1,26 +1,22 @@
-
-<!-- Suggestion form -->
-<!-- ng-submit="addSuggestion()" calls this function whenever a user submits an input -->
-<form ng-submit="addSuggestion()" style="margin-top: 50px">
-  <h3> Submit Your Suggestion </h3>
-  <div class="form-group">
-    <!-- ng-model="title" means whatever the user inputs is labelled "title" -->
-    <input type="text" class="form-control" placeholder="Great ideas here" ng-model="title"></input>
-  </div>
-  <button type="submit" class="btn btn-primary">Suggest</button>
+<form ng-submit="addSuggestion()">
+    <h3> Submit Your Suggestion </h3>
+    <div class="form-group" style="margin-top: 50px">
+      <!-- ng-model="title" means whatever the user inputs is labelled "title" -->
+      <input type="text" class="form-control" placeholder="Great ideas here" ng-model="title"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Suggest</button>
 </form>
 
-<!-- Suggestion & Upvotes section starts -->
-<!-- orderBy filter sorts the suggestions by 'upvotes', by default from lowest to
-highest but with the reverse set to true it is set highest to lowest -->
+<br>
+
 <div ng-repeat="b in a | orderBy : 'upvotes' : true ">
   <div> {{ b.title }} </div>
   <p>
-    <!-- ng-click calls the upVote() function which increases upvote by 1-->
-    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(b)"></span>
-    Upvotes: {{b.upvotes}}
+      <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(b)"></span>
+      Upvotes: {{b.upvotes}}
   </p>
-  <!-- $index will give you back the number of times the loop has looped, like a counter.
-  Here we are using it as the ID number of the suggestion -->
+  <button type="submit" ng-click="DeleteSuggestion($index)">Delete</button>
+  <button type="submit" ng-click="EditSuggestion($index)">Edit</button>
   <a href="#/comments/{{$index}}">Comments</a>
+  <br>
 </div>

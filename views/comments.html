@@ -1,23 +1,29 @@
-<!-- Suggestion selected-->
-<div> {{ x.title }} </div>
+<div>
+  <!-- Suggestion selected-->
+  <a href="#/"><h5>Home</h5></a>
 
-<!-- Suggestion form -->
-<!-- ng-submit="addSuggestion()" calls this function whenever a user submits an input -->
-<form ng-submit="addComment()" style="margin-top: 50px">
-  <h3> Submit Your Comment </h3>
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Comments Here" ng-model="titleB"></input>
+  <div> {{ x.title }} </div>
+
+  <!-- Suggestion form -->
+  <!-- ng-submit="addSuggestion()" calls this function whenever a user submits an input -->
+  <form ng-submit="addComment()" style="margin-top: 50px">
+      <h3> Submit Your Comment </h3>
+      <div class="form-group">
+          <input type="text" class="form-control" placeholder="Comments Here" ng-model="titleB"></input>
+      </div>
+      <button type="submit" class="btn btn-primary">Comment</button>
+  </form>
+  <br></br>
+  <!-- Comments & Upvotes section starts -->
+  <!-- orderBy filter sorts the suggestions by 'upvotes', by default from lowest to
+  highest but with the reverse set to true it is set highest to lowest -->
+  <div ng-repeat="y in x.comments | orderBy : 'upvotes' : true ">
+    <div> {{ y.body }} </div>
+    <p>
+      <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(y)"></span>
+      Upvotes: {{ y.upvotes }}
+    </p>
+    <button type="submit">Delete</button>
+    <button type="submit">Edit</button>
   </div>
-  <button type="submit" class="btn btn-primary">Comment</button>
-</form>
-
-<!-- Comments & Upvotes section starts -->
-<!-- orderBy filter sorts the suggestions by 'upvotes', by default from lowest to
-highest but with the reverse set to true it is set highest to lowest -->
-<div ng-repeat="y in x.comments | orderBy : 'upvotes' : true ">
-  <div> {{ y.body }} </div>
-  <p>
-    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(y)"></span>
-    Upvotes: {{ y.upvotes }}
-  </p>
 </div>
