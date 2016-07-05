@@ -10,14 +10,13 @@
 <br>
 <div class="main">
   <div class="suggestion-box" href="#/comments/{{$index}}" ng-repeat="b in a | orderBy : 'upvotes' : true ">
-    <a class="suggestion-box-click" href="#/comments/{{$index}}">
-      <div class="title"> {{ b.title }} </div>
-      <p class="upvotes">
-          <img id="not-active" src="img/thumb.png" width="30" height="30" ng-click="upVote(b)">
-          <span id="not-active"> Upvotes: {{b.upvotes}} </span>
-
-      </p>
-    </a>
+      <a href="#/comments/{{$index}}" class="title"> {{ b.title }} </a>
+        <p>
+          <img src="img/thumb.png" class="thumb" width="25" height="25" ng-click="upVote(b)"
+          onmouseover="this.src='img/thumb-active.png'"
+          onmouseout="this.src='img/thumb.png'">
+          <span class="upvotes"> Likes: {{b.upvotes}} </span>
+        </p>
   </div>
 </div>
 
