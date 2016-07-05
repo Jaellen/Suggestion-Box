@@ -15,7 +15,6 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
           });
 
           $scope.title = '';
-
       };
 
     $scope.DeleteSuggestion = function(idx) {
@@ -25,5 +24,4 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
     $scope.upVote = function(b) {
         b.upvotes += 1;
     };
-
 }]);

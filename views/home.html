@@ -1,22 +1,30 @@
-<form ng-submit="addSuggestion()">
-    <h3> Submit Your Suggestion </h3>
+<form class="header" ng-submit="addSuggestion()">
+    <h3> Submit A Suggestion! </h3>
     <div class="form-group" style="margin-top: 50px">
       <!-- ng-model="title" means whatever the user inputs is labelled "title" -->
-      <input type="text" class="form-control" placeholder="Great ideas here" ng-model="title"/>
+      <input type="text" class="form-control" placeholder="Type Idea Here" ng-model="title"/>
     </div>
-    <button type="submit" class="btn btn-primary">Suggest</button>
+    <button type="submit" class="main-button">Suggest</button>
 </form>
 
 <br>
+<div class="main">
+  <div class="suggestion-box" href="#/comments/{{$index}}" ng-repeat="b in a | orderBy : 'upvotes' : true ">
+    <a class="suggestion-box-click" href="#/comments/{{$index}}">
+      <div class="title"> {{ b.title }} </div>
+      <p class="upvotes">
+          <img id="not-active" src="img/thumb.png" width="30" height="30" ng-click="upVote(b)">
+          <span id="not-active"> Upvotes: {{b.upvotes}} </span>
 
-<div ng-repeat="b in a | orderBy : 'upvotes' : true ">
-  <div> {{ b.title }} </div>
-  <p>
-      <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(b)"></span>
-      Upvotes: {{b.upvotes}}
-  </p>
-  <button type="submit" ng-click="DeleteSuggestion($index)">Delete</button>
-  <button type="submit" ng-click="EditSuggestion($index)">Edit</button>
-  <a href="#/comments/{{$index}}">Comments</a>
-  <br>
+      </p>
+    </a>
+  </div>
 </div>
+
+
+<!-- If you want to add Delete and Edit buttons afterwards:
+<button type="submit" ng-click="DeleteSuggestion($index)">Delete</button>
+<button type="submit" ng-click="EditSuggestion($index)">Edit</button>
+
+<a class="button" href="#/comments/{{$index}}">Comments</a>
+-->
