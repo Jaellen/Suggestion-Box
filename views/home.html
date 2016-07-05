@@ -12,7 +12,14 @@
   <div class="suggestion-box" href="#/comments/{{$index}}" ng-repeat="b in a | orderBy : 'upvotes' : true ">
       <a href="#/comments/{{$index}}" class="title"> {{ b.title }} </a>
         <p>
-          <img src="img/thumb.png" class="thumb" width="25" height="25" ng-click="upVote(b)"
+          <img src="img/star.png" ng-click="star(b)"
+          class="icon" width="25" height="25"
+          onmouseover="this.src='img/star-active.png'"
+          onmouseclick="this.src='img/star.png'"
+          >
+          <span class="star"> Star: {{b.star}} </span>
+
+          <img src="img/thumb.png" class="icon" width="25" height="25" ng-click="upVote(b)"
           onmouseover="this.src='img/thumb-active.png'"
           onmouseout="this.src='img/thumb.png'">
           <span class="upvotes"> Likes: {{b.upvotes}} </span>
@@ -25,5 +32,5 @@
 <button type="submit" ng-click="DeleteSuggestion($index)">Delete</button>
 <button type="submit" ng-click="EditSuggestion($index)">Edit</button>
 
-<a class="button" href="#/comments/{{$index}}">Comments</a>
+onmouseover="this.src='img/star-active.png'"
 -->

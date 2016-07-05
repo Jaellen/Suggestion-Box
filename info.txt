@@ -1,26 +1,19 @@
-** -------------- SUMMARY OF PROJECT "suggestion_box" -------------- **
-                          VARIABLES & NOTES
+** ---------------------- PROJECT "Suggestion Box" ------------------------- **
 
-Project name: suggestion_box
+
+Project name: Suggestion Box
 User: Jonathan Aellen
-Description: A simple user feedback suggestion box web page app 
-
------ CONTROLLER ------
-
-HomeController:
-a = an angular object created to make the data_array visible to view
-
-CommentsController:
-x = an angular object created to make the data_array visible to view
-
------- SERVICES -------
-
-suggestions = service for the app's data
-data_object = object containing the data_array
-data_array = array that contains the suggestions, upvotes and comments
+Description: A simple user feedback suggestion box web page app
 
 
-------- VIEWS ---------
+--------------------------------- CREDIT ----------------------------------
 
-b = key value created in ng-repeat loop
-y = key value created in ng-repeat loop
+Star icon by Vicons Design from the Noun Project
+Like icon by Bluetip Design from the Noun Project
+
+
+------------------------------- EXTRA NOTES -------------------------------
+
+In case you want to add a delete function:
+       $scope.DeleteSuggestion = function(idx) {
+       $scope.a.splice(idx, 1);
