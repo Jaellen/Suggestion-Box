@@ -1,29 +1,35 @@
-<div>
-  <!-- Suggestion selected-->
-  <a href="#/"><h5>Home</h5></a>
+<!-- COMMENTS VIEW -->
 
-  <div> {{ x.title }} </div>
+<!-- Nav ------------------------------------------------------------------>
+<div class="navlink">
+    <a href="#/" class="button"><span>Home</span></a>
+    <a href="#/starred" class="button"><span>Starred</span></a>
+</div>
+<!-- Header ------------------------------------------------------------------>
+<div class="body">
+  <div class="header">
 
-  <!-- Suggestion form -->
-  <!-- ng-submit="addSuggestion()" calls this function whenever a user submits an input -->
-  <form ng-submit="addComment()" style="margin-top: 50px">
-      <h3> Submit Your Comment </h3>
-      <div class="form-group">
-          <input type="text" class="form-control" placeholder="Comments Here" ng-model="titleB"></input>
-      </div>
-      <button type="submit" class="btn btn-primary">Comment</button>
-  </form>
-  <br></br>
-  <!-- Comments & Upvotes section starts -->
-  <!-- orderBy filter sorts the suggestions by 'upvotes', by default from lowest to
-  highest but with the reverse set to true it is set highest to lowest -->
-  <div ng-repeat="y in x.comments | orderBy : 'upvotes' : true ">
-    <div> {{ y.body }} </div>
-    <p>
-      <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(y)"></span>
-      Upvotes: {{ y.upvotes }}
-    </p>
-    <button type="submit">Delete</button>
-    <button type="submit">Edit</button>
+    <form ng-submit="addComment()" style="margin-top: 50px">
+        <h2> Submit Comment </h2>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Comments Here" ng-model="titleB"></input>
+        </div>
+        <button type="submit" class="main-button">Comment</button>
+    </form> <br>
+  </div>
+
+<!-- Main -------------------------------------------------------------------->
+  <div class="main">
+      <br><h2> {{ x.title }} </h2> <br><br>
+
+    <div class="comments-box" ng-repeat="y in x.comments | orderBy ">
+      <div class="comments-title"> {{ y.body }} </div>
+      <p>
+        <img src="img/thumb.png" class="icon" ng-click="upVote(y)"
+        onmouseover="this.src='img/thumb-active.png'"
+        onmouseout="this.src='img/thumb.png'">
+        <span class="upvotes"> Likes: {{ y.upvotes }} </span>
+      </p>
+    </div>
   </div>
 </div>

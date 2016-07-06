@@ -12,6 +12,11 @@ app.config(function ($routeProvider) {
     templateUrl: 'views/comments.html'
   	})
 
+		.when('/starred/', {
+    controller: 'StarredController',
+    templateUrl: 'views/starred.html'
+  	})
+
   	.otherwise({
   		redirectTo: '/'
   	});

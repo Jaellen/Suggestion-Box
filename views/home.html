@@ -1,36 +1,40 @@
+<!-- HOME VIEW -->
+
+<!-- Nav ------------------------------------------------------------------>
+<div class="navlink">
+    <a href="#/starred" class="button"><span>Starred</span></a>
+</div>
+
+<!-- Header ------------------------------------------------------------------>
 <form class="header" ng-submit="addSuggestion()">
-    <h3> Submit A Suggestion! </h3>
+    <h3> Submit A Suggestion! </h3> <br>
+    <p> Do you have a suggestion, feedback, or an idea? Please: </p>
+    <p> 1. Submit your idea in the text field below  </p>
+    <p> 2. Vote for those ideas you like the most below </p>
+    <p> 3. Leave a comment about other great ideas! </p>
+
     <div class="form-group" style="margin-top: 50px">
-      <!-- ng-model="title" means whatever the user inputs is labelled "title" -->
       <input type="text" class="form-control" placeholder="Type Idea Here" ng-model="title"/>
     </div>
+
     <button type="submit" class="main-button">Suggest</button>
 </form>
 
+<!-- Main -------------------------------------------------------------------->
 <br>
 <div class="main">
   <div class="suggestion-box" href="#/comments/{{$index}}" ng-repeat="b in a | orderBy : 'upvotes' : true ">
       <a href="#/comments/{{$index}}" class="title"> {{ b.title }} </a>
         <p>
-          <img src="img/star.png" ng-click="star(b)"
-          class="icon" width="25" height="25"
+          <img src="img/star.png" class="icon" ng-click="star(b); toggleStar()"
           onmouseover="this.src='img/star-active.png'"
-          onmouseclick="this.src='img/star.png'"
-          >
+          onmouseout="this.src='img/star.png'">
           <span class="star"> Star: {{b.star}} </span>
 
-          <img src="img/thumb.png" class="icon" width="25" height="25" ng-click="upVote(b)"
+          <img src="img/thumb.png" class="icon" ng-click="upVote(b)"
           onmouseover="this.src='img/thumb-active.png'"
           onmouseout="this.src='img/thumb.png'">
           <span class="upvotes"> Likes: {{b.upvotes}} </span>
         </p>
   </div>
 </div>
-
-
-<!-- If you want to add Delete and Edit buttons afterwards:
-<button type="submit" ng-click="DeleteSuggestion($index)">Delete</button>
-<button type="submit" ng-click="EditSuggestion($index)">Edit</button>
-
-onmouseover="this.src='img/star-active.png'"
--->

@@ -7,7 +7,25 @@ app.factory('suggestions', [function() {
       {
           title:"Hold a demo night social for everyone to show off their awesome work",
           upvotes:11,
-          comments:[],
+          comments:
+          [
+            {
+              body: "I like this idea. We can do it monthly and schedule it way ahead to give people enough notice",
+              upvotes:4
+            },
+            {
+              body: "This may be cool if we do themes for each one",
+              upvotes:5
+            },
+            {
+              body: "What about employee hackathons? :)",
+              upvotes:3
+            },
+            {
+              body: "Themed hackathons, Love it!",
+              upvotes:6
+            }
+          ],
           star: true
       },
       {
@@ -56,6 +74,6 @@ app.factory('suggestions', [function() {
 
   /* empty array:
   var data_object =
-  { data_array:[{}]};
+  { data_array:[]};
     return data_object;
 }]); */
