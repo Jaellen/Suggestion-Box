@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!-- Head -------------------------------------------------------------------->
   <head>
       <title>SuggestionBox</title>
       <link href="css/bootstrap.css" rel="stylesheet">
@@ -8,8 +9,13 @@
       <script type="text/javascript" src="js/vendor/angular-route.js"></script>
       <meta charset="UTF-8">
   </head>
+
+<!-- Body -------------------------------------------------------------------->
     <body ng-app="SuggestionBox" ng-controller="HomeController">
-      <div class ="header"><h1> Suggestion Box </h1></div>
+        <div class ="header">
+            <img src="img/box.png" class="box-icon">
+            <h1> Suggestion Box </h1>
+        </div>
 
       <div ng-view></div>
 

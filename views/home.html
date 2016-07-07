@@ -1,13 +1,33 @@
 <!-- HOME VIEW -->
 
 <!-- Header ------------------------------------------------------------------>
-<form class="header" ng-submit="addSuggestion()">
-    <h3> Do you have a suggestion, feedback, or an idea? Please: </h3> <br>
-    <p> 1. Submit your idea in the text field below  </p>
-    <p> 2. Vote for those ideas you like the most below </p>
-    <p> 3. Leave a comment about other great ideas! </p>
+<!-- loudspeaker-icon Flip Effect -->
+<!--      <ul class="loudspeaker">
+          <li>
+              <figure>
+                  <img src="img/loudspeaker.png" alt=""/>
+                  <figcaption>
+                      <h3>Do you have a suggestion, feedback, or an idea? Please: </h3>
+                      <p>1. Submit your idea in the text field below </p>
+                      <p> 2. Vote for those ideas you like the most below </p>
+                      <p> 3. Leave a comment about other great ideas! </p>
+                  </figcaption>
+              </figure>
+          </li>
+      </ul>
+-->
+<div class="header">
+  <img src="img/loudspeaker.png" class="loudspeaker-icon">
+    <div class="steps">
+      <h3> Do you have a suggestion or an idea? </h3> <br>
+      <p> 1. Submit your idea in the text field below  </p>
+      <p> 2. Vote for those ideas you like the most below </p>
+      <p> 3. Leave a comment about other great ideas! </p>
+    </div>
+</div>
 
-    <div class="form-group" style="margin-top: 50px">
+<form class="header" ng-submit="addSuggestion()">
+    <div class="form-group">
       <input type="text" class="form-control" placeholder="Type Idea Here" ng-model="title"/>
     </div>
     <button type="submit" class="main-button">Suggest</button>
@@ -16,6 +36,7 @@
 <!-- Main -------------------------------------------------------------------->
 <br>
 <div class="main">
+<h3>Top Ranked Suggestions:</h3> <br>
   <div class="suggestion-box" href="#/comments/{{$index}}" ng-repeat="b in a | orderBy : 'upvotes' : true ">
       <a href="#/comments/{{$index}}" class="title"> {{ b.title }} </a>
         <p>
@@ -30,11 +51,12 @@
   </div>
 </div>
 
-<!--     <script>
-      var button = document.getElementById('button')
-      function toggleStar() {
+<!--
 
-      }
-    </script>
+<h3> Do you have a suggestion, feedback, or an idea? Please: </h3> <br>
+<p> 1. Submit your idea in the text field below  </p>
+<p> 2. Vote for those ideas you like the most below </p>
+<p> 3. Leave a comment about other great ideas! </p>
+
 
   -->

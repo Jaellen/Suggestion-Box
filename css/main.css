@@ -20,6 +20,25 @@ h2 {
     text-align: center;
 }
 
+.box-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.loudspeaker-icon {
+  display: inline;
+  width: auto;
+  height: 200px;
+  background-color: #ff3b4e;
+  float: left;
+  padding-left: 285px;
+}
+
+.steps {
+  display: inline;
+  text-align: left;
+}
+
 .navlink {
     background: #ff3b4e;
     text-align: center;
@@ -185,3 +204,83 @@ img {
     text-decoration: none;
     color: #FFFFFF;
 }
+
+/* - LOUDSPEAKER ICON FLIP EFFECT -------------------------------------------*/
+
+/*
+.loudspeaker {
+    position:relative;
+    width:300px;
+    height:200px;
+    overflow:hidden;
+    float:left;
+    margin-right:20px
+}
+.loudspeaker figure {
+    margin:0;
+    padding:0;
+    position:relative;
+    cursor:pointer;
+    margin-left:-50px
+}
+.loudspeaker figure img {
+    display:block;
+    position:relative;
+    z-index:10;
+    margin:-15px 0
+}
+.loudspeaker figure figcaption {
+    display:block;
+    position:absolute;
+    z-index:5;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+.loudspeaker figure h2 {
+    font-family:'Lato';
+    color:#fff;
+    font-size:20px;
+    text-align:left
+}
+.loudspeaker figure p {
+    display:block;
+    font-family:'Lato';
+    font-size:12px;
+    line-height:18px;
+    margin:0;
+    color:#fff;
+    text-align:left
+}
+.loudspeaker figure figcaption {
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    padding:29px 44px;
+    background-color:rgba(26,76,110,0.5);
+    text-align:center;
+    backface-visibility:hidden;
+    -webkit-transform:rotateY(-180deg);
+    -moz-transform:rotateY(-180deg);
+    transform:rotateY(-180deg);
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s
+}
+.loudspeaker figure img {
+    backface-visibility:hidden;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s
+}
+.loudspeaker figure:hover img,figure.hover img {
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    transform:rotateY(180deg)
+}
+.loudspeaker figure:hover figcaption,figure.hover figcaption {
+    -webkit-transform:rotateY(0);
+    -moz-transform:rotateY(0);
+    transform:rotateY(0)
+} */

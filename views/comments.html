@@ -20,8 +20,7 @@
 
 <!-- Main -------------------------------------------------------------------->
   <div class="main">
-      <br><h2> {{ x.title }} </h2> <br><br>
-
+    <br><h2> {{ x.title }} </h2> <br><br>
     <div class="comments-box" ng-repeat="y in x.comments | orderBy ">
       <div class="comments-title"> {{ y.body }} </div>
       <p>
