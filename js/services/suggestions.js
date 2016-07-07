@@ -5,6 +5,12 @@ app.factory('suggestions', [function() {
     data_array:
     [
       {
+          title:"Save the environment by having everyone to bring their own mugs and water bottles to work",
+          upvotes:15,
+          comments:[],
+          star: false
+      },
+      {
           title:"Hold a demo night social for everyone to show off their awesome work",
           upvotes:11,
           comments:
@@ -56,12 +62,6 @@ app.factory('suggestions', [function() {
       {
           title:"Paint the back wall with inspirational quotes and company values",
           upvotes:1,
-          comments:[],
-          star: false
-      },
-      {
-          title:"Save the environment by having everyone to bring their own mugs and water bottles to work",
-          upvotes:15,
           comments:[],
           star: false
       }

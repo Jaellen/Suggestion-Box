@@ -35,12 +35,12 @@ h2 {
 }
 
 .suggestion-box {
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-size: 18px;
-  margin: 0 0 8px;
-  padding: 20px;
-  text-decoration: none;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 18px;
+    margin: 0 0 8px;
+    padding: 20px;
+    text-decoration: none;
 }
 
 .suggestion-box:hover {
@@ -50,12 +50,12 @@ h2 {
 }
 
 .comments-box {
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-size: 18px;
-  margin: 0 0 8px;
-  padding: 20px;
-  text-decoration: none;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 18px;
+    margin: 0 0 8px;
+    padding: 20px;
+    text-decoration: none;
 }
 
 .form-control {
@@ -65,112 +65,123 @@ h2 {
 }
 
 .main-button {
-  background: #2CC990;
-  border-radius: 4px;
-  border: none;
-  color: #fff;
-  display: block;
-  font-weight: bold;
-  margin: auto;
-  padding: 13px 0;
-  text-align: center;
-  width: 200px;
-  font-size: 20px;
+    background: #2CC990;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    margin: auto;
+    padding: 13px 0;
+    text-align: center;
+    width: 200px;
+    font-size: 20px;
 }
 
 .main-button:hover {
-  background: #26B17E;
-  text-decoration: none;
+    background: #26B17E;
+    text-decoration: none;
+}
+
+.main-button:active {
+    outline: 0;
+    text-decoration: none;
+    border: none;
 }
 
 .title {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 28px;
-  text-decoration: none;
-  color: currentColor;
-  outline: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    text-decoration: none;
+    color: currentColor;
+    outline: 0;
 }
 
 .title:hover {
-  text-decoration: none;
-  color: currentColor;
-  outline: 0;
-  cursor: pointer;
+    text-decoration: none;
+    color: currentColor;
+    outline: 0;
+    cursor: pointer;
 }
 
 .comments-title {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 28px;
-  text-decoration: none;
-  color: currentColor;
-  outline: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    text-decoration: none;
+    color: currentColor;
+    outline: 0;
 }
 
 .icon {
-  cursor: pointer;
-  width: 25px;
-  height: 25px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.icon-star {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
 }
 
 .upvotes, .star {
-  font-size: 20px;
-  font-weight: 700;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 img {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 /* -HOME BUTTON --------------------------------------------------------------*/
 
 .button {
-
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #ff3b4e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #ff3b4e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
 }
 
 .button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-  text-decoration: none;
-  color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .button span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-  text-decoration: none;
-  color: #FFFFFF;
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .button:hover span {
-  padding-right: 25px;
-  text-decoration: none;
-  color: #FFFFFF;
+    padding-right: 25px;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .button:hover span:after {
-  opacity: 1;
-  right: 0;
-  text-decoration: none;
-  color: #FFFFFF;
+    opacity: 1;
+    right: 0;
+    text-decoration: none;
+    color: #FFFFFF;
 }

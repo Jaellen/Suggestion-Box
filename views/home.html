@@ -1,14 +1,8 @@
 <!-- HOME VIEW -->
 
-<!-- Nav ------------------------------------------------------------------>
-<div class="navlink">
-    <a href="#/starred" class="button"><span>Starred</span></a>
-</div>
-
 <!-- Header ------------------------------------------------------------------>
 <form class="header" ng-submit="addSuggestion()">
-    <h3> Submit A Suggestion! </h3> <br>
-    <p> Do you have a suggestion, feedback, or an idea? Please: </p>
+    <h3> Do you have a suggestion, feedback, or an idea? Please: </h3> <br>
     <p> 1. Submit your idea in the text field below  </p>
     <p> 2. Vote for those ideas you like the most below </p>
     <p> 3. Leave a comment about other great ideas! </p>
@@ -16,7 +10,6 @@
     <div class="form-group" style="margin-top: 50px">
       <input type="text" class="form-control" placeholder="Type Idea Here" ng-model="title"/>
     </div>
-
     <button type="submit" class="main-button">Suggest</button>
 </form>
 
@@ -26,10 +19,8 @@
   <div class="suggestion-box" href="#/comments/{{$index}}" ng-repeat="b in a | orderBy : 'upvotes' : true ">
       <a href="#/comments/{{$index}}" class="title"> {{ b.title }} </a>
         <p>
-          <img src="img/star.png" class="icon" ng-click="star(b); toggleStar()"
-          onmouseover="this.src='img/star-active.png'"
-          onmouseout="this.src='img/star.png'">
-          <span class="star"> Star: {{b.star}} </span>
+          <img class="icon-star" src="img/star.png" ng-click="star(b)">
+          <span class="star"> Star </span>
 
           <img src="img/thumb.png" class="icon" ng-click="upVote(b)"
           onmouseover="this.src='img/thumb-active.png'"
@@ -38,3 +29,12 @@
         </p>
   </div>
 </div>
+
+<!--     <script>
+      var button = document.getElementById('button')
+      function toggleStar() {
+
+      }
+    </script>
+
+  -->

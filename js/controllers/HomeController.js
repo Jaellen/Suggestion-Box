@@ -28,12 +28,18 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 //--------------------------------------------------------------------------//
 
     $scope.star = function(b) {
+      
+    var index = suggestions.data_array.indexOf(b);
+
        if (b.star === true) {
          b.star = false;
+         document.getElementsByClassName('icon-star')[index].setAttribute("src", "img/star.png");
        }
-       else {
+       else if (b.star === false) {
          b.star = true;
+         document.getElementsByClassName('icon-star')[index].setAttribute("src", "img/star-active.png");
        }
+       else return;
     };
 
 }]);
