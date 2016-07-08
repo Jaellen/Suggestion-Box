@@ -1,11 +1,14 @@
 app.controller('HomeController', ['$scope', 'suggestions', function($scope, suggestions) {
 
+  $scope.showComments = false; // On start hide dropdown comments
+
   $scope.a = suggestions.data_array;
+
 
 //--------------------------------------------------------------------------//
 
   $scope.addSuggestion = function() {
-          //if input empty, don't submit
+
           if(!$scope.title || $scope.title === "") {
             return;
           };
@@ -28,7 +31,7 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 //--------------------------------------------------------------------------//
 
     $scope.star = function(b) {
-      
+
     var index = suggestions.data_array.indexOf(b);
 
        if (b.star === true) {
@@ -41,5 +44,21 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
        }
        else return;
     };
+
+    //--------------------------------------------------------------------------//
+
+      $scope.addComment = function()
+      {
+        if(!$scope.titleC || $scope.titleC === "") {
+          return;
+        };
+
+        $scope.a.comments.push({
+          body: $scope.titleC,
+          upvotes: 0
+        });
+
+        $scope.titleC = '';
+      };
 
 }]);

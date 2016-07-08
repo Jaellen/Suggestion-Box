@@ -1,21 +1,6 @@
 <!-- HOME VIEW -->
 
 <!-- Header ------------------------------------------------------------------>
-<!-- loudspeaker-icon Flip Effect -->
-<!--      <ul class="loudspeaker">
-          <li>
-              <figure>
-                  <img src="img/loudspeaker.png" alt=""/>
-                  <figcaption>
-                      <h3>Do you have a suggestion, feedback, or an idea? Please: </h3>
-                      <p>1. Submit your idea in the text field below </p>
-                      <p> 2. Vote for those ideas you like the most below </p>
-                      <p> 3. Leave a comment about other great ideas! </p>
-                  </figcaption>
-              </figure>
-          </li>
-      </ul>
--->
 <div class="header">
   <img src="img/loudspeaker.png" class="loudspeaker-icon">
     <div class="steps">
@@ -36,27 +21,43 @@
 <!-- Main -------------------------------------------------------------------->
 <br>
 <div class="main">
-<h3>Top Ranked Suggestions:</h3> <br>
+<h3>Suggestions by Top Voted:</h3> <br>
   <div class="suggestion-box" href="#/comments/{{$index}}" ng-repeat="b in a | orderBy : 'upvotes' : true ">
       <a href="#/comments/{{$index}}" class="title"> {{ b.title }} </a>
         <p>
-          <img class="icon-star" src="img/star.png" ng-click="star(b)">
-          <span class="star"> Star </span>
+            <!--Star-->
+            <img class="icon-star" src="img/star.png" ng-click="star(b)">
+            <span class="star"> Star </span> &nbsp
 
-          <img src="img/thumb.png" class="icon" ng-click="upVote(b)"
-          onmouseover="this.src='img/thumb-active.png'"
-          onmouseout="this.src='img/thumb.png'">
-          <span class="upvotes"> Likes: {{b.upvotes}} </span>
+            <!--Thumb-->
+            <img src="img/thumb.png" class="icon" ng-click="upVote(b)"
+            onmouseover="this.src='img/thumb-active.png'"
+            onmouseout="this.src='img/thumb.png'">
+            <span class="upvotes"> {{b.upvotes}} </span> &nbsp
+
+            <!-- Comment -->
+            <img src="img/comment.png" class="icon" ng-click="showComments = !showComments"
+            onmouseover="this.src='img/comment-active.png'"
+            onmouseout="this.src='img/comment.png'">
+            <a class="dropdown" ng-click="showComments = !showComments"> Comments </a> &nbsp
         </p>
+
+        <!-- Dropdown Comments -->
+        <div ng-show="showComments">
+          <div class="comments-box-main" ng-repeat="y in b.comments">
+            <div class="comments-title"> {{ y.body }} </div>
+          </div>
+
+
+
+          <form ng-submit="addComment()" style="margin-top: 50px">
+              <h3> Submit Comment </h3>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Comments Here" ng-model="titleC"></input>
+              </div>
+              <button type="submit" class="main-button">Comment</button>
+          </form>
+        </div>
+
   </div>
 </div>
-
-<!--
-
-<h3> Do you have a suggestion, feedback, or an idea? Please: </h3> <br>
-<p> 1. Submit your idea in the text field below  </p>
-<p> 2. Vote for those ideas you like the most below </p>
-<p> 3. Leave a comment about other great ideas! </p>
-
-
-  -->

@@ -77,6 +77,15 @@ h2 {
     text-decoration: none;
 }
 
+.comments-box-main {
+    background: #C5FCE9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 18px;
+    margin: 0 0 8px;
+    padding: 20px;
+    text-decoration: none;
+}
+
 .form-control {
     margin: auto;
     text-align: center;
@@ -148,6 +157,21 @@ h2 {
 .upvotes, .star {
     font-size: 20px;
     font-weight: 700;
+}
+
+.dropdown {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdown:hover {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 img {
