@@ -33,13 +33,13 @@
             <img src="img/thumb.png" class="icon" ng-click="upVote(b)"
             onmouseover="this.src='img/thumb-active.png'"
             onmouseout="this.src='img/thumb.png'">
-            <span class="upvotes"> {{b.upvotes}} </span> &nbsp
+            <span class="upvotes"> +{{b.upvotes}} </span> &nbsp
 
             <!-- Comment -->
             <img src="img/comment.png" class="icon" ng-click="showComments = !showComments"
             onmouseover="this.src='img/comment-active.png'"
             onmouseout="this.src='img/comment.png'">
-            <a class="dropdown" ng-click="showComments = !showComments"> Comments </a> &nbsp
+            <a class="dropdown" ng-click="showComments = !showComments"> Comments ({{ b.comments.length }})</a> &nbsp
         </p>
 
         <!-- Dropdown Comments & Form-->
