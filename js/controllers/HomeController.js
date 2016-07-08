@@ -4,7 +4,6 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 
   $scope.a = suggestions.data_array;
 
-
 //--------------------------------------------------------------------------//
 
   $scope.addSuggestion = function() {
@@ -45,20 +44,20 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
        else return;
     };
 
-    //--------------------------------------------------------------------------//
+//--------------------------------------------------------------------------//
 
-      $scope.addComment = function()
-      {
-        if(!$scope.titleC || $scope.titleC === "") {
+      $scope.addComment = function(id) {
+
+        if(!$scope.a.comments || $scope.a.comments === "") {
           return;
         };
 
-        $scope.a.comments.push({
-          body: $scope.titleC,
+        $scope.a[id].comments.push({
+          body: $scope.a.comments,
           upvotes: 0
         });
-
-        $scope.titleC = '';
+        
+        $scope.a.comments = '';
       };
 
 }]);
