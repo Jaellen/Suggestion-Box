@@ -22,8 +22,8 @@
 <br>
 <div class="main">
 <h3>Suggestions by Top Voted:</h3> <br>
-  <div class="suggestion-box" href="#/comments/{{$index}}" ng-repeat="b in a | orderBy : 'upvotes' : true ">
-      <a href="#/comments/{{$index}}" class="title"> {{ b.title }} </a>
+  <div class="suggestion-box" ng-repeat="b in a | orderBy : 'upvotes' : true ">
+      <div class="title" ng-click="showComments = !showComments"> {{ b.title }} </div>
         <p>
             <!--Star-->
             <img class="icon-star" src="img/star.png" ng-click="star(b)">
@@ -39,7 +39,7 @@
             <img src="img/comment.png" class="icon" ng-click="showComments = !showComments"
             onmouseover="this.src='img/comment-active.png'"
             onmouseout="this.src='img/comment.png'">
-            <a class="dropdown" ng-click="showComments = !showComments"> Comments ({{ b.comments.length }})</a> &nbsp
+            <span class="dropdown" ng-click="showComments = !showComments"> Comments ({{ b.comments.length }})</span> &nbsp
         </p>
 
         <!-- Dropdown Comments & Form-->
@@ -59,3 +59,5 @@
 
   </div>
 </div>
+
+<!-- href="#/comments/{{$index}}" -->

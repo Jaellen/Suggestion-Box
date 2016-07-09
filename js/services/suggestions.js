@@ -32,7 +32,7 @@ app.factory('suggestions', [function() {
               upvotes:6
             }
           ],
-          star: true
+          star: false
       },
       {
           title:"Implement a no-internal meeting day on Friday to allow employees to get more work done",
