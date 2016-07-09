@@ -1,11 +1,29 @@
-<!-- COMMENTS VIEW -->
+<!-- STARRED VIEW -->
 
-<!-- Nav ------------------------------------------------------------------>
+<!-- Nav --------------------------------------------------------------------->
 <div class="navlink">
-    <a href="#/" class="button"><span>Home</span></a>
+    <a href="#/" class="button" ng-click="updateStar()"><span>Home</span></a>
 </div>
 
-<!-- Header ------------------------------------------------------------------>
+<!-- Main -------------------------------------------------------------------->
+
+<h3>Starred Suggestions:</h3> <br>
+
+<div class="suggestion-box" ng-repeat="b in a | filter : {star: true}">
+
+    <div class="title" ng-click="showComments = !showComments"> {{ b.title }} </div>
+
+
+    <!-- Dropdown Comments & Form-->
+    <div ng-show="showComments">
+        <div class="comments-box-main" ng-repeat="y in b.comments">
+          <div class="comments-title"> {{ y.body }} </div>
+        </div>
+
+    </div>
+</div>
+
+<!--
 <div class="body">
   <div class="header">
 
@@ -18,7 +36,6 @@
     </form> <br>
   </div>
 
-<!-- Main -------------------------------------------------------------------->
   <div class="main">
     <br><h2> {{ x.title }} </h2> <br><br>
     <div class="comments-box" ng-repeat="y in x.comments">
@@ -32,3 +49,4 @@
     </div>
   </div>
 </div>
+-->

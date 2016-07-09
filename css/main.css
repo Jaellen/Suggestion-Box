@@ -21,29 +21,38 @@ h2 {
 }
 
 .box-icon {
-  width: 100px;
-  height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 .loudspeaker-icon {
-  display: inline;
-  width: auto;
-  height: 200px;
-  background-color: #ff3b4e;
-  float: left;
-  padding-left: 285px;
+    display: inline;
+    width: auto;
+    height: 200px;
+    background-color: #ff3b4e;
+    float: left;
+    padding-left: 285px;
 }
 
 .steps {
-  display: inline;
-  text-align: left;
+    display: inline;
+    text-align: left;
 }
 
 .navlink {
     background: #ff3b4e;
     text-align: center;
     font-size: 30px;
+}
 
+.nav, .nav:hover {
+    float: right;
+    margin: 20px;
+    padding-right: 40px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 /* ------------------------------------------------------------------------- */

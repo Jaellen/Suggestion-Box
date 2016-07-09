@@ -15,7 +15,8 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
           $scope.a.push({
             title: $scope.title,
             upvotes: 0,
-            comments: []
+            comments: [],
+            star: false
           });
 
           $scope.title = '';
@@ -31,7 +32,7 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 
     $scope.star = function(b) {
 
-    var index = suggestions.data_array.indexOf(b);
+      var index = suggestions.data_array.indexOf(b);
 
        if (b.star === true) {
          b.star = false;
@@ -56,7 +57,7 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
           body: $scope.a.comments,
           upvotes: 0
         });
-        
+
         $scope.a.comments = '';
       };
 
