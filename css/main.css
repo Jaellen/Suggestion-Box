@@ -1,22 +1,7 @@
 body, html {
-    background: #f9f9f9;
+    background: #FFF;
     font-family: "Roboto", sans-serif;
-}
-
-.header {
-    background: #ff3b4e;
-    padding: 20px 0;
-    text-align: center;
-    color: #FFF;
-    font-size: 20px;
-}
-
-h1 {
-    font-size: 48px;
-    font-weight: bolder;
-}
-
-h2 {
+    color: #212121;
     text-align: center;
 }
 
@@ -25,22 +10,78 @@ h2 {
     height: 100px;
 }
 
+.header {
+    font-family: "Lato", sans-serif;
+    background: #FF5959;
+    padding: 20px;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.header-1 {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
 .loudspeaker-icon {
-    display: inline;
     width: auto;
-    height: 200px;
-    background-color: #ff3b4e;
-    float: left;
-    padding-left: 285px;
+    height: 176px;
+    background-color: #FF5959;
+    display: inline-block;
+    position: relative;
+    bottom: 68px;
+    right: 25px;
 }
 
 .steps {
-    display: inline;
+    display: inline-block;
     text-align: left;
+    position: relative;
+    right: 10px;
+}
+
+span {
+    font-size: 23px;
+}
+
+.form-control {
+    margin: auto;
+    text-align: center;
+    width: 45%;
+    position: relative;
+    bottom: 40px;
+}
+
+.main-button {
+    background: #00458A;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    margin: auto;
+    padding: 13px 0;
+    text-align: center;
+    width: 200px;
+    font-size: 20px;
+}
+
+.main-button:hover {
+    background: #0056AC;
+    text-decoration: none;
+}
+
+.main-button:focus {
+    outline: 0;
+}
+
+.main-button:active {
+    background: #00458A;
 }
 
 .navlink {
-    background: #ff3b4e;
+    background: #FF5959;
     text-align: center;
     font-size: 30px;
 }
@@ -54,6 +95,9 @@ h2 {
     font-size: 18px;
     cursor: pointer;
 }
+
+
+
 
 /* ------------------------------------------------------------------------- */
 
@@ -87,43 +131,12 @@ h2 {
 }
 
 .comments-box-main {
-    background: #F0F0F0;
+    background: #F5F5F5;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     font-size: 18px;
     margin: 0 0 8px;
     padding: 20px;
     text-decoration: none;
-}
-
-.form-control {
-    margin: auto;
-    text-align: center;
-    width: 50%;
-}
-
-.main-button {
-    background: #2CC990;
-    border-radius: 4px;
-    border: none;
-    color: #fff;
-    display: block;
-    font-weight: bold;
-    margin: auto;
-    padding: 13px 0;
-    text-align: center;
-    width: 200px;
-    font-size: 20px;
-}
-
-.main-button:hover {
-    background: #26B17E;
-    text-decoration: none;
-}
-
-.main-button:active {
-    outline: 0;
-    text-decoration: none;
-    border: none;
 }
 
 .title {
@@ -192,7 +205,7 @@ img {
 .button {
     display: inline-block;
     border-radius: 4px;
-    background-color: #ff3b4e;
+    background-color: #FF5959;
     border: none;
     color: #FFFFFF;
     text-align: center;

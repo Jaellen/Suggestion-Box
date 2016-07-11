@@ -1,7 +1,6 @@
 app.controller('HomeController', ['$scope', 'suggestions', function($scope, suggestions) {
 
   $scope.showComments = false; // On start hide dropdown comments
-
   $scope.a = suggestions.data_array;
 
 //--------------------------------------------------------------------------//
@@ -62,3 +61,24 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
       };
 
 }]);
+
+/*--------------------------------------------------------------------------//
+
+  $scope.updateStar = function() {
+
+    console.log("test");
+
+    for (i=0; i < $scope.a.length; i++) {
+
+    $scope.a = suggestions.data_array;
+
+    console.log($scope.a[i].star);
+
+      if ($scope.a[i].star === true) {
+          document.getElementsByClassName('icon-star')[i].setAttribute("src", "img/star-active.png");
+      }
+    };
+  };
+
+  $scope.updateStar();
+  */ 

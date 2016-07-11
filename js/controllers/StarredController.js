@@ -20,19 +20,8 @@ app.controller('StarredController', ['$scope', 'suggestions', '$routeParams', fu
       $scope.a.comments = '';
   };
 
-   $scope.updateStar = function() {
-
-     console.log("test");
-
-     for (i=0; i < a.length; i++) {
-
-         if (b.star === true) {
-           document.getElementsByClassName('icon-star')[i].setAttribute("src", "img/star-active.png");
-         };
-     };
-   };
-
 }]);
+
 /*
   $scope.x =  suggestions.data_array[$routeParams.id];
 
@@ -74,4 +63,19 @@ $scope.addComment = function()
   };
 
 }]);
+
+$scope.updateStar = function() {
+
+  console.log("test");
+
+  for (i=0; i < $scope.a.length; i++) {
+
+      if ($scope.a[i].star === true) {
+        document.getElementsByClassName('icon-star')[i].setAttribute("src", "img/star-active.png")[i];
+      };
+  };
+};
+
+//---------------------------------------------------------------------------//
+
 */

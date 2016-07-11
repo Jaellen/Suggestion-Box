@@ -2,22 +2,19 @@
 
 <!-- Header ------------------------------------------------------------------>
 <div class="header">
-  <img src="img/loudspeaker.png" class="loudspeaker-icon">
+    <img class="loudspeaker-icon" src="img/loudspeaker.png">
     <div class="steps">
-      <h3> Do you have a suggestion or an idea? </h3> <br>
+      <p><span> Do you have a suggestion or idea? </span></p><br>
       <p> 1. Submit your idea in the text field below  </p>
-      <p> 2. Vote for those ideas you like the most below </p>
-      <p> 3. Leave a comment about other great ideas! </p>
+      <p> 2. Vote for the ideas you like the most  </p>
+      <p> 3. Comment on other great ideas! </p>
     </div>
+
+    <form ng-submit="addSuggestion()" class="form-group">
+        <input type="text" class="form-control" placeholder="Type Idea Here" ng-model="title"/>
+      <button type="submit" class="main-button">Suggest</button>
+    </form>
 </div>
-
-<form class="header" ng-submit="addSuggestion()">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Type Idea Here" ng-model="title"/>
-    </div>
-    <button type="submit" class="main-button">Suggest</button>
-</form>
-
 <!-- Main -------------------------------------------------------------------->
 <a href="#/starred" class=nav> Starred </a>
 <br>
