@@ -2,27 +2,29 @@
 
 <!-- Nav --------------------------------------------------------------------->
 <div class="navlink">
-    <a href="#/" class="button" ng-click="updateStar()"><span>Home</span></a>
+    <a href="#/" class="button" ng-click="updateStar()"><span id="button">Home</span></a>
 </div>
 
 <!-- Main -------------------------------------------------------------------->
 
-<h3>Starred Suggestions:</h3> <br>
+<div class="main">
 
-<div class="suggestion-box" ng-repeat="b in a | filter : {star: true}">
+  <div class="header-page2">Starred Suggestions:</div> <br>
 
-    <div class="title" ng-click="showComments = !showComments"> {{ b.title }} </div>
+  <div class="suggestion-box" ng-repeat="b in a | filter : {star: true}">
+      <div class="title" ng-click="showComments = !showComments"> {{ b.title }} </div>
+      <img src="img/thumb.png" class="icon-thumb-page2" onmouseout="this.src='img/thumb.png'">
+      <span class="upvotes"> +{{b.upvotes}} </span> &nbsp
 
+      <!-- Dropdown Comments & Form-->
+      <div ng-show="showComments">
+          <div class="comments-box" ng-repeat="y in b.comments">
+            <div class="comments-title"> {{ y.body }} </div>
+          </div>
+      </div>
 
-    <!-- Dropdown Comments & Form-->
-    <div ng-show="showComments">
-        <div class="comments-box-main" ng-repeat="y in b.comments">
-          <div class="comments-title"> {{ y.body }} </div>
-        </div>
-
-    </div>
+  </div>
 </div>
-
 <!--
 <div class="body">
   <div class="header">

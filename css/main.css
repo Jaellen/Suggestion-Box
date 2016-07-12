@@ -80,69 +80,61 @@ span {
     background: #00458A;
 }
 
-.navlink {
-    background: #FF5959;
-    text-align: center;
-    font-size: 30px;
-}
-
-.nav, .nav:hover {
-    float: right;
-    margin: 20px;
-    padding-right: 40px;
-    text-decoration: none;
-    color: #000000;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-
-
-
 /* ------------------------------------------------------------------------- */
+
+.header-2 {
+  font-size: 32px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+.header-page2 {
+  margin: 30px 0 30px 0;
+  font-size: 32px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
 
 .main {
     margin: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 .suggestion-box {
-    background: #fff;
+    background: #FDFDFD;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-size: 18px;
-    margin: 0 0 8px;
-    padding: 20px;
+    font-size: 25px;
+    margin: 0px 0 20px 0;
+    padding: 20px 10px 10px 10px;
+    border: 1px solid #E1E1E1;
     text-decoration: none;
 }
 
 .suggestion-box:hover {
-    background: #fcfcfc;
+    background: #FBFBFB;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-    text-decoration: none;
 }
 
 .comments-box {
-    background: #fff;
+    background: #F6F6F6;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-size: 18px;
-    margin: 0 0 8px;
+    font-size: 22px;
+    margin: 0 40px 10px;
     padding: 20px;
+    border: 1px solid #E1E1E1;
     text-decoration: none;
 }
 
-.comments-box-main {
-    background: #F5F5F5;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-size: 18px;
-    margin: 0 0 8px;
-    padding: 20px;
+.comments-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
     text-decoration: none;
+    color: currentColor;
+    outline: 0;
 }
 
 .title {
-    font-family: "Roboto", sans-serif;
     font-weight: 300;
-    font-size: 28px;
     text-decoration: none;
     color: currentColor;
     outline: 0;
@@ -150,38 +142,50 @@ span {
 
 .title:hover {
     text-decoration: none;
-    color: currentColor;
-    outline: 0;
     cursor: pointer;
 }
 
-.comments-title {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-size: 28px;
-    text-decoration: none;
-    color: currentColor;
-    outline: 0;
-}
-
-.icon {
+.icon-comments {
     cursor: pointer;
     width: 25px;
     height: 25px;
+    margin: 9px 0px 12px 3px;
+}
+
+.icon-thumb {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin: 0 -2px 10px 5px;
+}
+
+.icon-thumb-page2 {
+    width: 25px;
+    height: 25px;
+    margin: 0 -2px 10px 5px;
 }
 
 .icon-star {
     cursor: pointer;
     width: 25px;
     height: 25px;
+    margin-top: 5px;
 }
 
-.upvotes, .star {
-    font-size: 20px;
-    font-weight: 700;
+.icon-star-copy {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
 }
 
-.dropdown {
+.icon-down {
+    width: auto;
+    height: 25px;
+}
+
+.upvotes .star .dropdown{
+
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
@@ -189,16 +193,40 @@ span {
 }
 
 .dropdown:hover {
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: none;
-  color: inherit;
   cursor: pointer;
 }
 
 img {
     margin-bottom: 12px;
 }
+
+/* ------------------------------------------------------------------------- */
+.nav {
+    float: right;
+    margin-right: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ff5959;
+    outline: 0;
+}
+
+.nav a{
+  text-decoration: none;
+  color: currentColor;
+}
+
+.nav:hover {
+  color: #E14F4F;
+}
+
+.navlink {
+    background: #FF5959;
+    text-align: center;
+    font-size: 30px;
+}
+
+
 
 /* -HOME BUTTON --------------------------------------------------------------*/
 
@@ -249,4 +277,8 @@ img {
     right: 0;
     text-decoration: none;
     color: #FFFFFF;
+}
+
+#button {
+    font-size: 28px;
 }

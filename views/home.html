@@ -11,30 +11,35 @@
     </div>
 
     <form ng-submit="addSuggestion()" class="form-group">
-        <input type="text" class="form-control" placeholder="Type Idea Here" ng-model="title"/>
+        <input type="text" class="form-control" placeholder="Type Your Idea Here!" ng-model="title"/>
       <button type="submit" class="main-button">Suggest</button>
     </form>
-</div>
+</div> <br>
+<img class="icon-down" src="img/down-blue.png"> <br>
+
 <!-- Main -------------------------------------------------------------------->
-<a href="#/starred" class=nav> Starred </a>
-<br>
+<div class="nav" href="#/starred">
+  <img src="img/star-pink.png" class="icon-star-copy">
+  <a href="#/starred"> Starred Suggestions</a>
+</div><br>
+
 <div class="main">
-<h3>Suggestions by Top Voted:</h3> <br>
+  <div class="header-2">Suggestions by Top Voted:</div> <br> <br>
   <div class="suggestion-box" ng-repeat="b in a | orderBy : 'upvotes' : true ">
-      <div class="title" ng-click="showComments = !showComments"> {{ b.title }} </div>
+        <div class="title" ng-click="showComments = !showComments"> {{ b.title }} </div>
         <p>
             <!--Star-->
             <img class="icon-star" src="img/star.png" ng-click="star(b)">
             <span class="star"> Star </span> &nbsp
 
             <!--Thumb-->
-            <img src="img/thumb.png" class="icon" ng-click="upVote(b)"
+            <img src="img/thumb.png" class="icon-thumb" ng-click="upVote(b)"
             onmouseover="this.src='img/thumb-active.png'"
             onmouseout="this.src='img/thumb.png'">
             <span class="upvotes"> +{{b.upvotes}} </span> &nbsp
 
             <!-- Comment -->
-            <img src="img/comment.png" class="icon" ng-click="showComments = !showComments"
+            <img src="img/comment.png" class="icon-comments" ng-click="showComments = !showComments"
             onmouseover="this.src='img/comment-active.png'"
             onmouseout="this.src='img/comment.png'">
             <span class="dropdown" ng-click="showComments = !showComments"> Comments ({{ b.comments.length }})</span> &nbsp
@@ -42,19 +47,20 @@
 
         <!-- Dropdown Comments & Form-->
         <div ng-show="showComments">
-          <div class="comments-box-main" ng-repeat="y in b.comments">
-            <div class="comments-title"> {{ y.body }} </div>
+            <div class="comments-box" ng-repeat="y in b.comments">
+              <div class="comments-title"> {{ y.body }} </div>
+            </div>
+
+            <form ng-submit="addComment($index)" style="margin-top: 50px">
+                <h3> Submit Comment </h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Add Comments Here" ng-model="a.comments"/>
+                </div>
+                <button type="submit" class="main-button">Comment</button>
+            </form>
           </div>
+    </div>
 
-          <form ng-submit="addComment($index)" style="margin-top: 50px">
-              <h3> Submit Comment </h3>
-              <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Comments Here" ng-model="a.comments"/>
-              </div>
-              <button type="submit" class="main-button">Comment</button>
-          </form>
-        </div>
-  </div>
+
+
 </div>
-
-<!-- href="#/comments/{{$index}}" -->
