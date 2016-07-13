@@ -299,7 +299,7 @@ img {
 ============================================================================= */
 
 .ng-enter {
-    animation: 5s both ease-in;
+    animation: 0.2s both ease-in;
 }
 
 .ng-leave {

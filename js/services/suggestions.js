@@ -8,7 +8,7 @@ app.factory('suggestions', [function() {
           title:"Save the environment by having everyone to bring their own mugs and water bottles to work",
           upvotes:6,
           comments:[],
-          star: true
+          star: false
       },
       {
           title:"Hold a demo night social for everyone to show off their awesome work",
@@ -32,26 +32,25 @@ app.factory('suggestions', [function() {
               upvotes:6
             }
           ],
-          star: true
+          star: false
       },
       {
           title:"Implement a no-internal meeting day on Friday to allow employees to get more work done",
           upvotes:2,
           comments:[],
-          star: true
+          star: false
       },
       {
           title:"Create an online swag shop for employees and customers to buy awesome company swag",
           upvotes:1,
           comments:[],
-          star: true
+          star: false
       },
       {
           title:"Implement an easier system for meeting and board room bookings",
           upvotes:9,
           comments:[],
           star: false
-
       },
       {
           title:"Offer a discount for yoga sessions",

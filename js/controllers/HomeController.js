@@ -1,11 +1,17 @@
 app.controller('HomeController', ['$scope', 'suggestions', function($scope, suggestions) {
 
-  $scope.showComments = false; // On start hide dropdown comments
-  $scope.a = suggestions.data_array;
-  $scope.pageClass = 'page-home';
+  $scope.a = suggestions.data_array.sort(function(a, b) {
+      return b.upvotes - a.upvotes
+  })
 
-  
+var test = function() {
+  for (i=0 ; i < 7 ; i++) {
+    console.log($scope.a[i].title);
+  };
+};
 
+test();
+console.log("");
 //--------------------------------------------------------------------------//
 
   $scope.addSuggestion = function() {
@@ -26,9 +32,37 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 
 //--------------------------------------------------------------------------//
 
-    $scope.upVote = function(b) {
-        b.upvotes += 1;
+  $scope.upVote = function(b) {
+
+    b.upvotes += 1;
+
+    var index1 = $scope.a.indexOf(b);
+    var index2 = index1 - 1;
+
+    console.log(index1);
+    console.log($scope.a[index1].upvotes);
+
+    console.log(index2);
+    console.log($scope.a[index2].upvotes);
+
+    if ($scope.a[index1].upvotes > $scope.a[index2].upvotes) {
+
+          Array.prototype.move = function (old_index, new_index) {
+              if (new_index >= this.length) {
+                  var k = new_index - this.length;
+                  while ((k--) + 1) {
+                      this.push(undefined);
+                  }
+              }
+              this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+              return this; // for testing purposes
+          };
+
+          $scope.a.move(index1, index2);
     };
+
+    console.log("test");
+  };
 
 //--------------------------------------------------------------------------//
 
@@ -64,24 +98,3 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
       };
 
 }]);
-
-/*--------------------------------------------------------------------------//
-
-  $scope.updateStar = function() {
-
-    console.log("test");
-
-    for (i=0; i < $scope.a.length; i++) {
-
-    $scope.a = suggestions.data_array;
-
-    console.log($scope.a[i].star);
-
-      if ($scope.a[i].star === true) {
-          document.getElementsByClassName('icon-star')[i].setAttribute("src", "img/star-active.png");
-      }
-    };
-  };
-
-  $scope.updateStar();
-  */

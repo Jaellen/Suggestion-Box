@@ -25,7 +25,7 @@
 
 <div class="main">
   <div class="header-2">Suggestions by Top Voted:</div> <br> <br>
-  <div class="suggestion-box" ng-repeat="b in a | orderBy : 'upvotes' : true ">
+  <div class="suggestion-box" ng-repeat="b in a">
         <div class="title" ng-click="showComments = !showComments"> {{ b.title }} </div>
         <p>
             <!--Star-->
