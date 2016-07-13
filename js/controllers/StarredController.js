@@ -1,8 +1,8 @@
 app.controller('StarredController', ['$scope', 'suggestions', '$routeParams', function($scope, suggestions, $routeParams) {
 
     $scope.showComments = false;
-
     $scope.a = suggestions.data_array;
+    $scope.pageClass = 'page-starred';
 
 //---------------------------------------------------------------------------//
 

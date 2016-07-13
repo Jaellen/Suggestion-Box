@@ -5,6 +5,9 @@ body, html {
     text-align: center;
 }
 
+/* HEADER
+============================================================================= */
+
 .box-icon {
     width: 100px;
     height: 100px;
@@ -80,7 +83,8 @@ span {
     background: #00458A;
 }
 
-/* ------------------------------------------------------------------------- */
+/* MAIN
+============================================================================= */
 
 .header-2 {
   font-size: 32px;
@@ -97,7 +101,7 @@ span {
 
 .main {
     margin: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 300px;
 }
 
 .suggestion-box {
@@ -108,12 +112,16 @@ span {
     padding: 20px 10px 10px 10px;
     border: 1px solid #E1E1E1;
     text-decoration: none;
+    transition: 1s linear all;
+    -webkit-transition: 1s linear all;
 }
 
 .suggestion-box:hover {
     background: #FBFBFB;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
+
+/* --------------------------------------------------------------------------*/
 
 .comments-box {
     background: #F6F6F6;
@@ -123,6 +131,8 @@ span {
     padding: 20px;
     border: 1px solid #E1E1E1;
     text-decoration: none;
+    transition: 1s linear all;
+    -webkit-transition: 1s linear all;
 }
 
 .comments-title {
@@ -186,21 +196,22 @@ span {
 
 .upvotes .star .dropdown{
 
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: none;
-  color: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
 }
 
 .dropdown:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 img {
     margin-bottom: 12px;
 }
 
-/* ------------------------------------------------------------------------- */
+/* Nav
+============================================================================= */
 .nav {
     float: right;
     margin-right: 40px;
@@ -228,7 +239,8 @@ img {
 
 
 
-/* -HOME BUTTON --------------------------------------------------------------*/
+/* Home Button
+============================================================================= */
 
 .button {
     display: inline-block;
@@ -281,4 +293,56 @@ img {
 
 #button {
     font-size: 28px;
+}
+
+/* Transitions
+============================================================================= */
+
+.ng-enter {
+    animation: 5s both ease-in;
+}
+
+.ng-leave {
+    animation: 0.2s both ease-in;
+}
+
+.showComments.ng-hide-add, .showComments.ng-hide-remove {
+    transition: all linear .4s;
+}
+
+.showComments.ng-hide {
+  line-height: 31px;
+  opacity: 0;
+}
+
+.comments-box.ng-enter {
+  opacity: 0;
+}
+
+.comments-box.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.comments-box.ng-leave {
+  opacity: 1;
+}
+
+.comments-box.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.suggestion-box.ng-enter {
+  opacity: 0;
+}
+
+.suggestion-box.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.suggestion-box.ng-leave {
+  opacity: 1;
+}
+
+.suggestion-box.ng-leave.ng-leave-active {
+  opacity: 0;
 }

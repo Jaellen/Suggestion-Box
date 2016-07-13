@@ -2,6 +2,9 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
 
   $scope.showComments = false; // On start hide dropdown comments
   $scope.a = suggestions.data_array;
+  $scope.pageClass = 'page-home';
+
+  
 
 //--------------------------------------------------------------------------//
 
@@ -81,4 +84,4 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
   };
 
   $scope.updateStar();
-  */ 
+  */
