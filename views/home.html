@@ -28,20 +28,30 @@
   <div class="suggestion-box" ng-repeat="b in a">
         <div class="title" ng-click="showComments = !showComments"> {{ b.title }} </div>
         <p>
-            <!--Star-->
-            <img class="icon-star" src="img/star.png" ng-click="star(b)">
+
+          <!--Star-->
+            <img src="img/star.png" class="iconStar"
+              ng-click="iconStar = !iconStar ; iconStarActive = !iconStarActive ; star(b)"
+              ng-hide="iconStar">
+
+            <img src="img/star-active.png" class="iconStarActive"
+              ng-click="iconStar = !iconStar ; iconStarActive = !iconStarActive ; star(b)"
+              ng-show="iconStarActive">
+
             <span class="star"> Star </span> &nbsp
 
-            <!--Thumb-->
+          <!--Thumb-->
             <img src="img/thumb.png" class="icon-thumb" ng-click="upVote(b)"
             onmouseover="this.src='img/thumb-active.png'"
             onmouseout="this.src='img/thumb.png'">
+
             <span class="upvotes"> +{{b.upvotes}} </span> &nbsp
 
-            <!-- Comment -->
+          <!-- Comment -->
             <img src="img/comment.png" class="icon-comments" ng-click="showComments = !showComments"
             onmouseover="this.src='img/comment-active.png'"
             onmouseout="this.src='img/comment.png'">
+
             <span class="dropdown" ng-click="showComments = !showComments"> Comments ({{ b.comments.length }})</span> &nbsp
         </p>
 
@@ -58,9 +68,7 @@
                 </div>
                 <button type="submit" class="main-button">Comment</button>
             </form>
-          </div>
+        </div>
+        
     </div>
-
-
-
 </div>
