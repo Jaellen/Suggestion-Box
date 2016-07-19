@@ -83,4 +83,21 @@ app.controller('HomeController', ['$scope', 'suggestions', function($scope, sugg
         $scope.a.comments = '';
       };
 
+//--------------------------------------------------------------------------//
+
+      $scope.highlightComments = function(b) {
+
+        var i = true;
+
+        if (i) {
+          var index3 = suggestions.data_array.indexOf(b);
+          document.getElementsByClassName("dropdown")[index3].setAttribute("style", "color: #00458A");
+          i = false;
+          }
+        else {
+          document.getElementsByClassName("dropdown")[index3].setAttribute("style", "color: #212121");
+          i = true;
+        }
+      }
+
 }]);

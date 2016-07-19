@@ -47,12 +47,12 @@
 
             <span class="upvotes"> +{{b.upvotes}} </span> &nbsp
 
-          <!-- Comment -->
+          <!-- Comment-->
             <img src="img/comment.png" class="icon-comments" ng-click="showComments = !showComments"
             onmouseover="this.src='img/comment-active.png'"
             onmouseout="this.src='img/comment.png'">
 
-            <span class="dropdown" ng-click="showComments = !showComments"> Comments ({{ b.comments.length }})</span> &nbsp
+            <span class="dropdown" ng-click="showComments = !showComments ; highlightComments(b)"> Comments ({{ b.comments.length }})</span> &nbsp
         </p>
 
         <!-- Dropdown Comments & Form-->
@@ -69,6 +69,6 @@
                 <button type="submit" class="main-button">Comment</button>
             </form>
         </div>
-        
+
     </div>
 </div>
