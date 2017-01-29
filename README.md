@@ -5,3 +5,5 @@ Visit local version of app at:
 https://suggestion-box-1.herokuapp.com/#/ 
 
 ![alt tag](https://github.com/Jaellen/Suggestion-Box/blob/master/img/screenshot.png)
+
+![alt tag](https://github.com/Jaellen/Suggestion-Box/blob/master/img/screenshot2.png)
